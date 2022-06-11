@@ -47,32 +47,55 @@ ESP8266是一款串口WiFi模块，内部集成MCU能实现单片机之间串口
 
 1.依据如下电路设计图将继电器、电源模块、WiFi模块和USB灯通过杜邦线连接好，USB灯通电能亮
 
+![image](图片/图片1.png) 
+
 2.配置继电器，使之为高电平接通低电平断开
+
+![image](图片/图片2.png)
+![image](图片/图片3.png)
+![image](图片/图片4.png)
 
 3.通过Arduino为NodeMCU编写程序，变成HTTP/HTTPS服务器，且有继电器控制功能。
 
 (1)编写程序前应先安装好NodeMCU的串口驱动
 
+![image](图片/图片5.png)
+
 (2)配置Arduino，打开Arduino，IDE->菜单项文件->首选项，然后会看到附加开发版管理器网址，填入http://arduino.esp8266.com/stable/package_esp8266com_index.json，重启IDE；
+
+![image](图片/图片6.png)
+![image](图片/图片7.png)
        
 (3)设置串口
    
-
+![image](图片/图片8.png)
 
 (4)添加ESP8266库
+
+![image](图片/图片9.png)
   
 4.编写具有发送HTTP/HTTPS功能的网站。
 
 本次实验中的网站，我仅仅只编写了一个按钮，使其具有发送HTTP/HTTPS功能
 
+![image](图片/图片10.png)
+![image](图片/图片11.png)
+
 
 5.烧录程序
 
+![image](图片/图片12.png)
+
 6.测试程序
+
+![image](图片/图片13.png)
 
 烧录成功后，连接到TP-LINK_6472，分配IP地址为192.168.1.103
 
 7.手机通过IP地址进入网站，点击按钮向服务器发起申请，发出请求，控制开关灯
+
+![image](图片/图片14.png)
+![image](图片/图片15.png)
 
 8.演示视频：改造普通灯变为Wi-Fi灯_哔哩哔哩_bilibili https://b23.tv/9pss5Pi
 
